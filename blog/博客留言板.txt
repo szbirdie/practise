@@ -1,0 +1,20 @@
+id 用户名、标题、内容、时间  name title   content
+PHP 徐工 22:48:30 
+用户可在 leave-message 页面提交留言内容  2页
+PHP 徐工 22:48:50 
+然后在 messge-list 页面可以看留言列表   主页
+PHP 徐工 22:49:40 
+message-detail 页面可查看单条留言的具体内容  
+PHP 徐工 22:50:01 
+message-delete 页面可以删除留言
+
+表：
+CREATE TABLE `blog` (
+  `id` int(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(16) NOT NULL DEFAULT '',
+  `title` text NOT NULL ,
+  `content` longtext NOT NULL,
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+   PRIMARY KEY (`ID`)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
+

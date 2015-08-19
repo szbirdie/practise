@@ -1,13 +1,16 @@
-﻿<?php
-require "conn.inc.php";
+<?php
+       require "conn.inc.php";
+       
+       $id = intval($_GET['id']);
+       if(!$id) {
+           die("id error.");   
+       }
+       
        //删除语句
-       $sql ="delete from test_user where id=2";
+       $sql ="delete from test_user where id=($id)";
 
        mysql_query($sql);
-
-
-       //最后自动增长的ID
-       echo mysql_insert_id(); 
+       echo "影响的行数".mysql_affected_rows();
 
        //离开
        mysql_close();
